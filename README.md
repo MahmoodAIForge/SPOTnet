@@ -21,12 +21,12 @@ Endoscopic Frames
       │
       ▼
 ┌─────────────────────────────────┐
-│  Step 2-5: SPOTnet Training     │  UNet + Multi-Scale + Boundary Loss
+│  Step 2-5: SPOTnet Training     │  UNet + Multi-Scale + Boundary Loss → SPOTnet
 └─────────────────────────────────┘
       │
       ▼
 ┌─────────────────────────────────┐
-│  Step 6: Iterative Inpainting   │  SPOTnet + LaMa → Specular-Free Output
+│  Step 6: Iterative Inpainting   │  SPOTnet + LaMa → Specular-Free Output 
 └─────────────────────────────────┘
 ```
 
