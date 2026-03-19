@@ -141,12 +141,13 @@ SPOTnet uses a lightweight **UNet** with:
 
 ### Specular Reflection Detection
 
-| Method | Accuracy | IoU | Precision | Recall | E-measure |
-|--------|----------|-----|-----------|--------|----------|
-| Arnold et al. | 0.9620 | 0.3698 | 0.5361 | 0.5885 | 0.5307 |
-| **SPOTnet (Ours)** | **0.9657** | **0.3798** | **0.5419** | **0.6016** | **0.5371** |
+| Method | Params | Time (ms) | Accuracy | IoU | Recall | E-measure |
+|--------|--------|-----------|----------|-----|--------|-----------|
+| Arnold et al. | N/A | ~15 | 0.993±0.005 | 0.392±0.112 | 0.402±0.112 | 0.732±0.112 |
+| EndoSRR | 93.79M | ~150 | 0.994±0.004 | 0.566±0.150 | 0.674±0.157 | 0.959±0.055 |
+| **SPOTnet (Ours)** | **0.77M** | **~50** | **0.995±0.003** | **0.613±0.116** | **0.740±0.106** | **0.963±0.041** |
 
-SPOTnet outperforms Arnold et al. on **IoU (+2.7%)** and **Recall (+2.2%)** without any manual annotations.
+SPOTnet achieves **state-of-the-art** performance with only **0.77M parameters** — **121× smaller** than EndoSRR (93.79M) while outperforming it on IoU (+8.3%) and Recall (+9.8%), all without any manual annotations.
 
 ---
 
