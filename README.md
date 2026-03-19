@@ -21,7 +21,7 @@ Endoscopic Frames
       │
       ▼
 ┌─────────────────────────────────┐
-│  Step 2-5: SPOTnet Training     │  DetUNet + Multi-Scale + Boundary Loss
+│  Step 2-5: SPOTnet Training     │  UNet + Multi-Scale + Boundary Loss
 └─────────────────────────────────┘
       │
       ▼
@@ -48,7 +48,7 @@ Endoscopic Frames
 | # | Notebook | Description |
 |---|----------|-------------|
 | 01 | `01_specular_library_creation.ipynb` | Extract specular patches using HSV detection |
-| 02 | `02_spotnet_baseline.ipynb` | Train baseline DetUNet (BCE + Dice) |
+| 02 | `02_spotnet_baseline.ipynb` | Train baseline UNet (BCE + Dice) |
 | 03 | `03_spotnet_multiscale.ipynb` | Add multi-scale training |
 | 04 | `04_spotnet_boundary.ipynb` | Add boundary-aware loss |
 | 05 | `05_spotnet_final.ipynb` | Full SPOTnet (MS + Boundary) |
@@ -60,7 +60,7 @@ Endoscopic Frames
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/SPOTnet.git
+git clone https://github.com/MahmoodAIForge/SPOTnet.git
 cd SPOTnet
 pip install -r requirements.txt
 ```
@@ -118,7 +118,7 @@ jupyter nbconvert --to notebook --execute 06_iterative_inpainting.ipynb
 
 ## Model Architecture
 
-SPOTnet uses a lightweight **DetUNet** with:
+SPOTnet uses a lightweight **UNet** with:
 - 3-level encoder-decoder with skip connections
 - SiLU activations + BatchNorm
 - Only **~500K parameters**
@@ -137,10 +137,23 @@ SPOTnet uses a lightweight **DetUNet** with:
 
 ---
 
+## Results
+
+### Specular Reflection Detection
+
+| Method | Accuracy | IoU | Precision | Recall | E-measure |
+|--------|----------|-----|-----------|--------|----------|
+| Arnold et al. | 0.9620 | 0.3698 | 0.5361 | 0.5885 | 0.5307 |
+| **SPOTnet (Ours)** | **0.9657** | **0.3798** | **0.5419** | **0.6016** | **0.5371** |
+
+SPOTnet outperforms Arnold et al. on **IoU (+2.7%)** and **Recall (+2.2%)** without any manual annotations.
+
+---
+
 ## Inpainting
 
 We use **LaMa** (Large Mask inpainting) for specular removal:
-```python
+```bash
 pip install simple-lama-inpainting
 ```
 
@@ -153,9 +166,9 @@ The iterative pipeline runs up to 5 detect→inpaint cycles until the specular r
 If you use this work, please cite:
 ```bibtex
 @article{spotnet2025,
-  title   = {SPOTnet: Weakly-Supervised Specular Reflection Detection and Removal for Endoscopic Images},
-  author  = {Your Name},
-  journal = {Journal Name},
+  title   = {SPOTnet: Weakly-Supervised Specular Reflection Detection and Removal for Minimal Access Surgery},
+  author  = {},
+  journal = {},
   year    = {2025}
 }
 ```
