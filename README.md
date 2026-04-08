@@ -166,6 +166,120 @@ The iterative pipeline runs up to 5 detect→inpaint cycles until the specular r
 
 <img width="1628" height="1172" alt="GeneralisablityTest (1)" src="https://github.com/user-attachments/assets/0f7034bb-ff40-4713-a502-52711896bfcd" />
 <p><em>Qualitative results of the proposed specular detection and inpainting pipeline on diverse surgical datasets.</em></p>
+
+## Downstream Segmentation Validation
+
+To evaluate the practical impact of specular reflection removal, we trained **DeepLabV3+** separately on the expert-labelled original images of the **TEMSET-24K** dataset and on the corresponding **specular-free enhanced images** produced by our pipeline. Performance is reported across **11 semantic classes**. Overall, training on the enhanced images led to consistent improvements, with the **average validation F1 score increasing from 0.713 to 0.905**.
+
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="3">Class</th>
+      <th colspan="4">Accuracy</th>
+      <th colspan="4">F1 Score</th>
+    </tr>
+    <tr>
+      <th colspan="2">Training Set</th>
+      <th colspan="2">Validation Set</th>
+      <th colspan="2">Training Set</th>
+      <th colspan="2">Validation Set</th>
+    </tr>
+    <tr>
+      <th>Original</th>
+      <th>Enhanced</th>
+      <th>Original</th>
+      <th>Enhanced</th>
+      <th>Original</th>
+      <th>Enhanced</th>
+      <th>Original</th>
+      <th>Enhanced</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="9"><strong>Anatomy</strong></td>
+    </tr>
+    <tr>
+      <td>RectalWall</td>
+      <td>0.947</td><td>0.986</td><td>0.950</td><td>0.977</td>
+      <td>0.894</td><td>0.971</td><td>0.892</td><td>0.951</td>
+    </tr>
+    <tr>
+      <td>Lesion</td>
+      <td>0.986</td><td>0.997</td><td>0.988</td><td>0.996</td>
+      <td>0.866</td><td>0.974</td><td>0.867</td><td>0.953</td>
+    </tr>
+    <tr>
+      <td>RectalWallDefect</td>
+      <td>0.976</td><td>0.994</td><td>0.978</td><td>0.990</td>
+      <td>0.835</td><td>0.957</td><td>0.834</td><td>0.927</td>
+    </tr>
+
+    <tr>
+      <td colspan="9"><strong>Instruments</strong></td>
+    </tr>
+    <tr>
+      <td>Rectoscope</td>
+      <td>0.987</td><td>0.997</td><td>0.987</td><td>0.996</td>
+      <td>0.885</td><td>0.969</td><td>0.886</td><td>0.960</td>
+    </tr>
+    <tr>
+      <td>Retractor</td>
+      <td>0.992</td><td>0.998</td><td>0.993</td><td>0.997</td>
+      <td>0.872</td><td>0.972</td><td>0.875</td><td>0.956</td>
+    </tr>
+    <tr>
+      <td>Diathermy</td>
+      <td>0.993</td><td>0.999</td><td>0.994</td><td>0.998</td>
+      <td>0.823</td><td>0.972</td><td>0.832</td><td>0.957</td>
+    </tr>
+
+    <tr>
+      <td colspan="9"><strong>Miscellaneous</strong></td>
+    </tr>
+    <tr>
+      <td>Landmark</td>
+      <td>0.995</td><td>0.998</td><td>0.996</td><td>0.998</td>
+      <td>0.431</td><td>0.831</td><td>0.460</td><td>0.804</td>
+    </tr>
+    <tr>
+      <td>Blood</td>
+      <td>0.998</td><td>1.000</td><td>0.998</td><td>0.999</td>
+      <td>0.387</td><td>0.916</td><td>0.351</td><td>0.679</td>
+    </tr>
+    <tr>
+      <td>Feces</td>
+      <td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td>
+      <td>0.000</td><td>0.892</td><td>0.000</td><td>0.871</td>
+    </tr>
+    <tr>
+      <td>PoorVisibility</td>
+      <td>0.993</td><td>0.999</td><td>0.992</td><td>0.995</td>
+      <td>0.894</td><td>0.982</td><td>0.854</td><td>0.899</td>
+    </tr>
+    <tr>
+      <td>OutOfBody</td>
+      <td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td>
+      <td>0.998</td><td>0.999</td><td>0.996</td><td>0.996</td>
+    </tr>
+
+    <tr>
+      <td><strong>Average</strong></td>
+      <td><strong>0.988</strong></td><td><strong>0.997</strong></td>
+      <td><strong>0.989</strong></td><td><strong>0.995</strong></td>
+      <td><strong>0.717</strong></td><td><strong>0.949</strong></td>
+      <td><strong>0.713</strong></td><td><strong>0.905</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<p><em>Impact of specular removal on downstream semantic segmentation using DeepLabV3+ on TEMSET-24K.</em></p>
+
+
 ## Citation
 
 If you use this work, please cite:
