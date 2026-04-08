@@ -26,6 +26,7 @@ Endoscopic Frames
 │  Step 6: Iterative Inpainting   │  SPOTnet + LaMa → Specular-Free Output 
 └─────────────────────────────────┘
 ```
+<img width="1992" height="1586" alt="Pipeline" src="https://github.com/user-attachments/assets/ca130335-287d-4893-9506-f2a04a05464c" />
 
 ---
 
