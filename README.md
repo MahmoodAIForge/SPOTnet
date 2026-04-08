@@ -146,7 +146,8 @@ SPOTnet uses a lightweight **UNet** with:
 | **SPOTnet (Ours)** | **0.77M** | **~50** | **0.995±0.003** | **0.613±0.116** | **0.740±0.106** | **0.963±0.041** |
 
 Evaluated on **TEMSET-24k** test set. SPOTnet achieves **state-of-the-art** performance with only **0.77M parameters** — **121× smaller** than EndoSRR (93.79M) while outperforming it on IoU (+8.3%) and Recall (+9.8%), all without any manual annotations.
-
+<img width="3266" height="1222" alt="detection_comparison (1)" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
+*Qualitative comparison of specular reflection detection method*
 ---
 
 ## Inpainting
