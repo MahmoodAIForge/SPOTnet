@@ -1,5 +1,9 @@
 # SPOTnet: Weakly-Supervised Specular Reflection Detection and Removal for Endoscopic Images
 
+
+https://github.com/user-attachments/assets/cdcb437a-ee68-43e8-965e-383ce04ed900
+
+
 <p align="center">
   <img src="assets/pipeline.png" width="800"/>
 </p>
