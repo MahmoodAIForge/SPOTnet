@@ -165,7 +165,6 @@ The iterative pipeline runs up to 5 detect→inpaint cycles until the specular r
 ---
 ## Qualitative Results
 
-
 <img width="1628" height="1172" alt="GeneralisablityTest (1)" src="https://github.com/user-attachments/assets/0f7034bb-ff40-4713-a502-52711896bfcd" />
 *Qualitative results of the proposed specular detection and inpainting pipeline on diverse surgical datasets*
 
