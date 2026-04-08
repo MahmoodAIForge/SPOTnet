@@ -163,7 +163,6 @@ pip install simple-lama-inpainting
 The iterative pipeline runs up to 5 detect→inpaint cycles until the specular ratio drops below 0.015%.
 
 ---
-```md
 ## Qualitative Results
 
 
