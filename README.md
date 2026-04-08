@@ -190,7 +190,7 @@ To evaluate the impact of specular reflection removal on downstream semantic seg
 | **Average** | **0.988** | **0.997** | **0.989** | **0.995** | **0.717** | **0.949** | **0.713** | **0.905** |
 
 <p><em>Impact of specular removal on downstream semantic segmentation using DeepLabV3+ on TEMSET-24K.</em></p>
-
+```
 
 ## Citation
 
