@@ -149,7 +149,7 @@ Evaluated on **TEMSET-24k** test set. SPOTnet achieves **state-of-the-art** perf
 
 ---
 <img width="3266" height="1222" alt="detection_comparison (1)" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
-_Qualitative comparison of specular reflection detection method_
+*Qualitative comparison of specular reflection detection method*
 
 ---
 
