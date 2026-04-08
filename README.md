@@ -3,13 +3,6 @@
 
 https://github.com/user-attachments/assets/cdcb437a-ee68-43e8-965e-383ce04ed900
 
-
-<p align="center">
-  <img src="assets/pipeline.png" width="800"/>
-</p>
-
----
-
 ## Overview
 
 **SPOTnet** is a weakly-supervised deep learning pipeline for detecting and removing specular reflections (SR) in endoscopic images. It requires **no manual annotations** — instead, a real specular patch library is automatically built from HSV-based detection and used to train a lightweight UNet detector.
