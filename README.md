@@ -149,8 +149,7 @@ Evaluated on **TEMSET-24k** test set. SPOTnet achieves **state-of-the-art** perf
 
 ---
 <img width="3266" height="1222" alt="detection_comparison (1)" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
-*Qualitative comparison of specular reflection detection method*
-
+<p><em>Qualitative comparison of specular reflection detection method</em></p>
 ---
 
 ## Inpainting
@@ -166,9 +165,7 @@ The iterative pipeline runs up to 5 detect→inpaint cycles until the specular r
 ## Qualitative Results
 
 <img width="1628" height="1172" alt="GeneralisablityTest (1)" src="https://github.com/user-attachments/assets/0f7034bb-ff40-4713-a502-52711896bfcd" />
-_Qualitative results of the proposed specular detection and inpainting pipeline on diverse surgical datasets_
-
-
+<p><em>Qualitative results of the proposed specular detection and inpainting pipeline on diverse surgical datasets.</em></p>
 ## Citation
 
 If you use this work, please cite:
