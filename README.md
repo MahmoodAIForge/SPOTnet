@@ -167,6 +167,8 @@ The iterative pipeline runs up to 5 detect→inpaint cycles until the specular r
 <img width="1628" height="1172" alt="GeneralisablityTest (1)" src="https://github.com/user-attachments/assets/0f7034bb-ff40-4713-a502-52711896bfcd" />
 <p><em>Qualitative results of the proposed specular detection and inpainting pipeline on diverse surgical datasets.</em></p>
 
+---
+
 ## Downstream Segmentation Validation
 
 To evaluate the impact of specular reflection removal on downstream semantic segmentation, we trained **DeepLabV3+** separately on the original expert-labelled **TEMSET-24K** images and on the corresponding **specular-free enhanced images** produced by our pipeline. Training on the enhanced images led to consistent improvements across **11 semantic classes**, with the **average validation F1 score increasing from 0.713 to 0.905**.
