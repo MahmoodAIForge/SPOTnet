@@ -193,6 +193,19 @@ To evaluate the impact of specular reflection removal on downstream semantic seg
 
 <p><em>Impact of specular removal on downstream semantic segmentation using DeepLabV3+ on TEMSET-24K.</em></p>
 
+
+### External Validation on EndoScene
+
+To further assess generalizability, we performed external validation on the **EndoScene** dataset using a binary polyp segmentation setting. A **DeepLabV3+** model was trained separately on the **original images** and on the corresponding **specular-free enhanced images** produced by our pipeline. Specular removal improved validation performance, with the **polyp-class F1 score increasing from 0.938 to 0.956**.
+
+| Class | Train Acc (Original) | Train Acc (Enhanced) | Val Acc (Original) | Val Acc (Enhanced) | Train F1 (Original) | Train F1 (Enhanced) | Val F1 (Original) | Val F1 (Enhanced) |
+|------|-----------------------|----------------------|--------------------|--------------------|---------------------|---------------------|-------------------|-------------------|
+| Background | 0.997 | 0.996 | 0.993 | 0.994 | 0.997 | 0.997 | 0.993 | 0.994 |
+| Polyp | 0.977 | 0.978 | 0.940 | 0.955 | 0.976 | 0.974 | 0.938 | 0.956 |
+| **Average** | **0.987** | **0.987** | **0.966** | **0.975** | **0.987** | **0.985** | **0.966** | **0.975** |
+
+<p><em>External validation of the impact of specular removal on EndoScene segmentation. As EndoScene was formulated as a binary task, results are reported for the background and polyp classes.</em></p>
+
 ---
 ## Citation
 
