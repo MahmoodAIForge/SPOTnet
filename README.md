@@ -35,7 +35,7 @@ Endoscopic Frames
 | Method | Accuracy | IoU | Precision | Recall | E-measure |
 |--------|----------|-----|-----------|--------|-----------|
 | Arnold et al. | 0.9620 | 0.3698 | 0.5361 | 0.5885 | 0.5307 |
-| **SPOTnet (Ours)** | **0.9657** | **0.3798** | 0.5419 | **0.6016** | 0.5371 |
+| **SPOTnet (Ours)** | **0.9657** | **0.3798** | **0.5419 **| **0.6016** | 0.5371 |
 
 *Evaluated on EndoRR test set. SPOTnet outperforms Arnold et al. on IoU (+2.7%) and Recall (+2.2%) without any manual annotations.*
 
