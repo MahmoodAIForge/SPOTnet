@@ -150,7 +150,7 @@ SPOTnet uses a lightweight **UNet** with:
 Evaluated on **TEMSET-24k** manually annotated test set. **SPOTnet achieves state-of-the-art performance** with only **0.77M parameters**,  **SPOTnet** outperforming all competing methods across Accuracy, IoU, Recall, and E-measure.
 
 ---
-<img width="3266" height="1222" alt="detection_comparison (1)" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
+<img width="3266" height="1222" alt="detection_comparison (1)" [src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181](https://github.com/MahmoodAIForge/SPOTnet/blob/main/detection_comparison_7col.pdf)" />
 <p><em>Qualitative comparison of specular reflection detection method</em></p>
 
 
