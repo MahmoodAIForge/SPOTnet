@@ -147,7 +147,7 @@ SPOTnet uses a lightweight **UNet** with:
 | EndoSRR | 93.79M | ~150 | 0.994±0.004 | 0.566±0.150 | 0.674±0.157 | 0.959±0.055 |
 | **SPOTnet (Ours)** | **0.77M** | **~48** | **0.995±0.003** | **0.613±0.116** | **0.740±0.106** | **0.963±0.041** |
 
-Evaluated on **TEMSET-24k** manually annotated test set. **SPOTnet achieves state-of-the-art performance** with only **0.77M parameters**—**122× smaller** than EndoSRR (93.79M) and **647× smaller** than UnReflectAnything (498M), while outperforming all competing methods across Accuracy, IoU, Recall, and E-measure. Compared with EndoSRR, SPOTnet improves IoU by **8.3%** and Recall by **9.8%**, all **without any manual annotations**.
+Evaluated on **TEMSET-24k** manually annotated test set. **SPOTnet achieves state-of-the-art performance** with only **0.77M parameters**,  **SPOTnet** outperforming all competing methods across Accuracy, IoU, Recall, and E-measure.
 
 ---
 <img width="3266" height="1222" alt="detection_comparison (1)" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
