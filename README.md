@@ -56,8 +56,8 @@ Endoscopic / MIS Frames
 
 †*Inference times measured at each method's native resolution on a single RTX 3090. SPOTnet, EndoSRR and UnReflectAnything times correspond to the detection stage; Li et al.'s network produces detection and removal in a single inseparable forward pass, so its time reflects both stages.*
 
-<img width="3266" height="1222" alt="detection_comparison" src="https://github.com/user-attachments/assets/5eebfd83-bb4b-449e-935d-3ceffb763181" />
-<p><em>Qualitative comparison of specular reflection detection. SPOTnet most closely matches the ground truth, capturing both large specular regions and fine scattered highlights.</em></p>
+![Detection comparison](figures/detection_comparison_7col.png)
+<p><em>Qualitative comparison of specular reflection detection. From left to right: original frame, ground-truth mask, and detections from SPOTnet, Li et al., EndoSRR, UnReflectAnything, and Arnold et al. SPOTnet most closely matches the ground truth, capturing both large specular regions and fine scattered highlights, while the competing methods miss a greater proportion of reflections.</em></p>
 
 ---
 
@@ -104,6 +104,9 @@ Complete restoration pipelines evaluated on a synthetic specular benchmark (real
 
 *The detect-then-inpaint pipelines share the LaMa backend, so their PSNR is governed by mask quality and is statistically equivalent. SPOTnet supplies the most accurate masks, achieving the best structural (SSIM) and perceptual (LPIPS) fidelity.*
 
+![End-to-end restoration comparison](figures/comparison_grid.png)
+<p><em>Qualitative end-to-end restoration comparison. The LaMa-based pipelines (SPOTnet, EndoSRR, Li et al.) produce clean, faithful restorations; Endo-STTN is visibly blurrier, and UnReflectAnything alters the whole frame.</em></p>
+
 ---
 
 ## Choice of Inpainting Backend
@@ -119,6 +122,9 @@ Five inpainting backends applied to the **same SPOTnet-detected mask**, isolatin
 | **LaMa** | **26.12** | **0.908** | **0.1214** | **29.57** | **0.892** | **0.1422** | 39.7 |
 
 *LaMa provides the best balance of pixel-level fidelity, perceptual quality, and runtime, supporting its selection as the restoration backend.*
+
+![Inpainter comparison](figures/inpainter_grid.png)
+<p><em>Qualitative comparison of inpainting backends on the same SPOTnet-detected mask. LaMa and the classical methods (Telea, Navier–Stokes) remove specular regions cleanly; MAT shows lower fidelity from the natural-image domain gap; PowerPaint introduces spurious hallucinated textures, illustrating the unsuitability of unconstrained generative inpainting for surgical restoration.</em></p>
 
 ---
 
@@ -184,6 +190,9 @@ A prospective evaluation by **13 surgeons** (11 colorectal, 2 general surgery; m
 | Suturing | 48 | 66.7 | 79.2 | 81.3 |
 
 *Performance is strongest in stable phases (Landmarking, Blood Suction) and most challenged in dynamic, instrument-heavy sequences (Suturing), consistent with the known limitations of frame-independent inpainting.*
+
+![Clinical qualitative cases](figures/clinical_qualitative.png)
+<p><em>Representative cases from the clinical validation set where specular removal is most challenging (top: original; bottom: processed). These illustrate the frame types underlying the 17.4% of assessments in which reflection removal was rated inadequate.</em></p>
 
 ---
 
