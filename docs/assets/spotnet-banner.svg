@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">SPOTnet — surgical specular reflection detection and removal</title>
+  <desc id="desc">A dark research banner with an endoscopic field changing from glare to a clear field, the SPOTnet wordmark, and key research metrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080b19"/>
+      <stop offset="0.52" stop-color="#10142a"/>
+      <stop offset="1" stop-color="#081d26"/>
+    </linearGradient>
+    <radialGradient id="tissue" cx="42%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#ef6c8d"/>
+      <stop offset="0.35" stop-color="#a53664"/>
+      <stop offset="0.72" stop-color="#51234c"/>
+      <stop offset="1" stop-color="#160e2a"/>
+    </radialGradient>
+    <linearGradient id="clear" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8ae8ff" stroke-opacity=".055"/>
+    </pattern>
+    <clipPath id="scope"><circle cx="190" cy="180" r="120"/></clipPath>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="358" rx="28" fill="url(#bg)" stroke="#36c8dc" stroke-opacity=".35"/>
+  <rect x="1" y="1" width="1198" height="358" rx="28" fill="url(#grid)"/>
+
+  <g clip-path="url(#scope)">
+    <circle cx="190" cy="180" r="120" fill="url(#tissue)"/>
+    <path d="M72 206C112 152 139 148 184 171C226 192 248 154 316 124V300H68Z" fill="#63234c" opacity=".74"/>
+    <path d="M76 104C122 129 160 106 190 76C216 50 265 66 314 105V60H70Z" fill="#d34b75" opacity=".28"/>
+    <path d="M190 60V300H320V60Z" fill="#051520" opacity=".17"/>
+    <path d="M190 60V300" stroke="#67e8f9" stroke-width="2" stroke-dasharray="5 7" opacity=".55"/>
+
+    <g opacity=".95">
+      <ellipse cx="123" cy="122" rx="18" ry="11" fill="#fff" transform="rotate(-18 123 122)"/>
+      <circle cx="147" cy="171" r="8" fill="#fff"/>
+      <ellipse cx="105" cy="217" rx="13" ry="7" fill="#fff" transform="rotate(24 105 217)"/>
+      <circle cx="165" cy="239" r="5" fill="#fff"/>
+      <circle cx="102" cy="153" r="4" fill="#fff"/>
+      <circle cx="150" cy="110" r="25" fill="#dffaff" opacity=".22" filter="url(#glow)"/>
+    </g>
+
+    <g opacity=".6">
+      <circle cx="240" cy="123" r="3" fill="#d8fbff"/>
+      <circle cx="266" cy="207" r="2" fill="#d8fbff"/>
+    </g>
+  </g>
+  <circle cx="190" cy="180" r="121" fill="none" stroke="url(#clear)" stroke-width="4"/>
+  <circle cx="190" cy="180" r="137" fill="none" stroke="#5ce7f5" stroke-opacity=".14" stroke-dasharray="5 10"/>
+
+  <g transform="translate(335 55)">
+    <g>
+      <rect width="178" height="30" rx="15" fill="#221b45" stroke="#8b5cf6" stroke-opacity=".75"/>
+      <circle cx="17" cy="15" r="5" fill="#a78bfa"/>
+      <text x="31" y="20" fill="#c4b5fd" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">RESEARCH RELEASE</text>
+    </g>
+    <text x="0" y="101" fill="#f8fbff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="76" font-weight="800" letter-spacing="5">SPOT<tspan fill="#55dff3">net</tspan></text>
+    <text x="3" y="140" fill="#b8c4df" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" letter-spacing="2.4">WEAKLY-SUPERVISED SURGICAL VISION</text>
+    <text x="3" y="177" fill="#eef5ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Detect the glare. Restore the field. Preserve the anatomy.</text>
+
+    <g transform="translate(0 207)" font-family="Inter,Segoe UI,Arial,sans-serif">
+      <g>
+        <rect width="139" height="45" rx="11" fill="#141a35" stroke="#3e4c72"/>
+        <text x="14" y="18" fill="#8fa1c7" font-size="10" font-weight="700" letter-spacing="1.2">DETECTOR</text>
+        <text x="14" y="36" fill="#fff" font-size="15" font-weight="700">0.77M params</text>
+      </g>
+      <g transform="translate(150)">
+        <rect width="139" height="45" rx="11" fill="#141a35" stroke="#3e4c72"/>
+        <text x="14" y="18" fill="#8fa1c7" font-size="10" font-weight="700" letter-spacing="1.2">RECALL</text>
+        <text x="14" y="36" fill="#fff" font-size="15" font-weight="700">0.740</text>
+      </g>
+      <g transform="translate(300)">
+        <rect width="139" height="45" rx="11" fill="#141a35" stroke="#3e4c72"/>
+        <text x="14" y="18" fill="#8fa1c7" font-size="10" font-weight="700" letter-spacing="1.2">DOWNSTREAM F1</text>
+        <text x="14" y="36" fill="#fff" font-size="15" font-weight="700">+26.9%</text>
+      </g>
+      <g transform="translate(450)">
+        <rect width="139" height="45" rx="11" fill="#112d35" stroke="#22d3ee" stroke-opacity=".65"/>
+        <text x="14" y="18" fill="#7eeaf6" font-size="10" font-weight="700" letter-spacing="1.2">CLINICAL TRUST</text>
+        <text x="14" y="36" fill="#fff" font-size="15" font-weight="700">88.9%</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(1090 54)">
+    <circle cx="0" cy="0" r="4" fill="#22d3ee"/>
+    <circle cx="17" cy="0" r="4" fill="#8b5cf6"/>
+    <circle cx="34" cy="0" r="4" fill="#f59e0b"/>
+  </g>
+</svg>

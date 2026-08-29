@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">SPOTnet end-to-end research pipeline</title>
+  <desc id="desc">Five stages from unlabelled surgical video and pseudo-label generation to compact detection, mask refinement, LaMa restoration, and downstream validation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090d1c"/>
+      <stop offset="1" stop-color="#0b2028"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#a5edff" stroke-opacity=".035"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#4fc9d8"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="468" rx="25" fill="url(#bg)" stroke="#45cedd" stroke-opacity=".28"/>
+  <rect x="1" y="1" width="1198" height="468" rx="25" fill="url(#grid)"/>
+
+  <text x="48" y="58" fill="#f8fbff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="27" font-weight="750">From unlabelled frames to restored surgical vision</text>
+  <text x="48" y="86" fill="#93a7c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">A reproducible detect-then-inpaint pipeline with explicit masks, compact inference, and clinical evaluation.</text>
+
+  <g stroke="#4fc9d8" stroke-opacity=".65" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M239 236H266"/>
+    <path d="M468 236H495"/>
+    <path d="M697 236H724"/>
+    <path d="M926 236H953"/>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g transform="translate(40 125)">
+      <rect width="199" height="222" rx="19" fill="#14142a" stroke="#8b5cf6" stroke-opacity=".68"/>
+      <text x="20" y="34" fill="#b9a7ff" font-size="11" font-weight="800" letter-spacing="1.5">01 · DISCOVER</text>
+      <text x="20" y="72" fill="#fff" font-size="19" font-weight="750">Specular library</text>
+      <text x="20" y="107" fill="#b6c2dc" font-size="13">Unlabelled MIS video</text>
+      <text x="20" y="132" fill="#b6c2dc" font-size="13">HSV physical signature</text>
+      <text x="20" y="157" fill="#b6c2dc" font-size="13">Quality filtering</text>
+      <rect x="20" y="181" width="159" height="24" rx="12" fill="#2b2154"/>
+      <text x="99.5" y="198" text-anchor="middle" fill="#d7ceff" font-size="11" font-weight="700">~500K pseudo-labels</text>
+    </g>
+
+    <g transform="translate(269 125)">
+      <rect width="199" height="222" rx="19" fill="#111a2c" stroke="#4f8edc" stroke-opacity=".65"/>
+      <text x="20" y="34" fill="#72b7ff" font-size="11" font-weight="800" letter-spacing="1.5">02 · LEARN</text>
+      <text x="20" y="72" fill="#fff" font-size="19" font-weight="750">SPOTnet detector</text>
+      <text x="20" y="107" fill="#b6c2dc" font-size="13">Lightweight U-Net</text>
+      <text x="20" y="132" fill="#b6c2dc" font-size="13">Multi-scale training</text>
+      <text x="20" y="157" fill="#b6c2dc" font-size="13">Boundary-aware loss</text>
+      <rect x="20" y="181" width="159" height="24" rx="12" fill="#172d4c"/>
+      <text x="99.5" y="198" text-anchor="middle" fill="#bce1ff" font-size="11" font-weight="700">0.77M parameters</text>
+    </g>
+
+    <g transform="translate(498 125)">
+      <rect width="199" height="222" rx="19" fill="#10222b" stroke="#22d3ee" stroke-opacity=".66"/>
+      <text x="20" y="34" fill="#67e8f9" font-size="11" font-weight="800" letter-spacing="1.5">03 · DETECT</text>
+      <text x="20" y="72" fill="#fff" font-size="19" font-weight="750">Explicit mask</text>
+      <text x="20" y="107" fill="#b6c2dc" font-size="13">Tiled full-resolution</text>
+      <text x="20" y="132" fill="#b6c2dc" font-size="13">Thresholded output</text>
+      <text x="20" y="157" fill="#b6c2dc" font-size="13">Morphological dilation</text>
+      <rect x="20" y="181" width="159" height="24" rx="12" fill="#123643"/>
+      <text x="99.5" y="198" text-anchor="middle" fill="#bff7ff" font-size="11" font-weight="700">~21 FPS detection</text>
+    </g>
+
+    <g transform="translate(727 125)">
+      <rect width="199" height="222" rx="19" fill="#261d22" stroke="#f59e0b" stroke-opacity=".65"/>
+      <text x="20" y="34" fill="#fbbf54" font-size="11" font-weight="800" letter-spacing="1.5">04 · RESTORE</text>
+      <text x="20" y="72" fill="#fff" font-size="19" font-weight="750">LaMa inpainting</text>
+      <text x="20" y="107" fill="#cfc1bb" font-size="13">Mask-guided removal</text>
+      <text x="20" y="132" fill="#cfc1bb" font-size="13">Local reconstruction</text>
+      <text x="20" y="157" fill="#cfc1bb" font-size="13">Anatomy preservation</text>
+      <rect x="20" y="181" width="159" height="24" rx="12" fill="#49331b"/>
+      <text x="99.5" y="198" text-anchor="middle" fill="#ffe0a5" font-size="11" font-weight="700">2.9 FPS end-to-end</text>
+    </g>
+
+    <g transform="translate(956 125)">
+      <rect width="204" height="222" rx="19" fill="#112623" stroke="#34d399" stroke-opacity=".65"/>
+      <text x="20" y="34" fill="#6ee7b7" font-size="11" font-weight="800" letter-spacing="1.5">05 · VALIDATE</text>
+      <text x="20" y="72" fill="#fff" font-size="19" font-weight="750">Measure impact</text>
+      <text x="20" y="107" fill="#b8ccc8" font-size="13">Detection benchmark</text>
+      <text x="20" y="132" fill="#b8ccc8" font-size="13">Downstream vision</text>
+      <text x="20" y="157" fill="#b8ccc8" font-size="13">Surgeon assessment</text>
+      <rect x="20" y="181" width="164" height="24" rx="12" fill="#173c33"/>
+      <text x="102" y="198" text-anchor="middle" fill="#b9f6df" font-size="11" font-weight="700">Evidence, not cosmetics</text>
+    </g>
+  </g>
+
+  <g transform="translate(40 385)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect width="1120" height="48" rx="14" fill="#101b2d" stroke="url(#line)" stroke-opacity=".65"/>
+    <circle cx="24" cy="24" r="8" fill="#f59e0b"/>
+    <text x="44" y="21" fill="#eef5ff" font-size="12" font-weight="750">RESEARCH BOUNDARY</text>
+    <text x="44" y="37" fill="#9fb0cd" font-size="11.5">Frame-independent inpainting can struggle in dynamic, instrument-heavy scenes; clinical deployment requires task-specific validation and human oversight.</text>
+  </g>
+</svg>
