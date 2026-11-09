@@ -305,6 +305,47 @@ SPOTnet builds on and compares with:
 - [EndoSRR](https://github.com/Tobyzai/EndoSRR) — dataset and evaluation protocols; and
 - [Arnold et al.](https://doi.org/10.1007/s11548-010-0507-y) — classical HSV-based reflection detection.
 
+## Reproducibility
+
+The headline detection result reproduces **out-of-the-box** from the shipped weight
+(`weights/spotnet.pt`) and the bundled 20-frame test set — no external download needed:
+
+```bash
+git clone https://github.com/MahmoodAIForge/SPOTnet.git
+cd SPOTnet
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute 07_benchmark.ipynb   # or open and run it
+```
+
+`07_benchmark.ipynb` loads the four shipped detector checkpoints from `weights/` and evaluates them on
+`TEMSET_SpecularTest_Dataset/` (tiled inference, tile 384 / overlap 96, binarisation
+threshold 0.13), reproducing the paper's full detection/ablation table, including the released SPOTnet row:
+
+| Model | IoU | Recall | E-measure |
+|-------|-----|--------|-----------|
+| SPOTnet (released) | 0.613 | 0.740 | 0.963 |
+
+**What requires the full dataset.** The exemplar library, training (notebooks 01-05), end-to-end inpainting
+(06), and the downstream DeepLabV3+ segmentation
+(`Original_Images_SegmentationDepLabV3.ipynb`) need the full **TEMSET-24K** dataset
+from [Zenodo](https://zenodo.org/records/14016844). Download and extract it, point the
+`FRAMES_DIR` / `DATA_ROOT` config cell in those notebooks at the frames, and run them in
+order. Training notebooks fix the random seed (`SEED`) for determinism.
+
+---
+
+## License
+
+The **code** in this repository (notebooks, `spotnet.py`, `weights/spotnet.pt`) is
+released under the **MIT License** (see `LICENSE`).
+
+The bundled **`TEMSET_SpecularTest_Dataset/`** (20 frames and their specular masks) is a
+subset of **TEMSET-24K** and is distributed under **CC-BY-NC 4.0** — *not* MIT. It may be
+used for non-commercial research with attribution (see `DATA_LICENSE`, and cite
+TEMSET-24K). These two licences apply to different parts of the repository.
+
+---
+
 ## Citation
 
 If you use SPOTnet, please cite:
@@ -313,7 +354,9 @@ If you use SPOTnet, please cite:
 @article{alam2026spotnet,
   title   = {SPOTnet: Weakly-Supervised Specular Reflection Detection and Removal for Minimal Access Surgery},
   author  = {Alam, Mahmood and Bilal, Muhammad and Khan, Ufaq and Cohen, Emil and Bapu, Deepa and Hajiyavand, Amir M. and Khan, Kifayat and Akanbi, Lukman and Ajayi, Anuoluwapo and Kumar, Vikas and Xie, Yutong and Ali, Muhammad A. and Beggs, Andrew D. and Khan, Muhammad Haris and Ashraf, Shazad Q.},
-  year    = {2026}
+  journal = {npj Digital Surgery},
+  year    = {2026},
+  note    = {DOI to be added on publication}
 }
 ```
 

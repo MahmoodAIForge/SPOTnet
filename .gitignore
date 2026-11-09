@@ -8,12 +8,12 @@ venv/
 env/
 
 # ---- Model weights ----
-# Ignore all checkpoints by default; the released SPOTnet weight is force-added
-# (see `git add -f weights/spotnet.pt`).
+# Ignore stray checkpoints by default, but ship the small detector checkpoints in
+# weights/ (the 0.77M DetUNet weights used in the paper, ~3 MB each).
 *.pth
 *.pt
 *.ckpt
-!weights/spotnet.pt
+!weights/*.pt
 
 # ---- Datasets & large media (never commit patient / licensed data) ----
 dataset/

@@ -1,0 +1,16 @@
+DATA LICENSE — TEMSET_SpecularTest_Dataset/
+===========================================
+
+The image frames and specular masks under `TEMSET_SpecularTest_Dataset/` are a
+20-frame subset of the TEMSET-24K dataset and are distributed under the
+Creative Commons Attribution–NonCommercial 4.0 International (CC-BY-NC 4.0) licence:
+
+    https://creativecommons.org/licenses/by-nc/4.0/
+
+You may share and adapt these images for NON-COMMERCIAL purposes with attribution.
+This licence applies ONLY to the contents of `TEMSET_SpecularTest_Dataset/`.
+All code in this repository is licensed separately under the MIT License (see `LICENSE`).
+
+Attribution / source:
+    TEMSET-24K — https://zenodo.org/records/14016844
+    Please cite the TEMSET-24K dataset when using these images.
