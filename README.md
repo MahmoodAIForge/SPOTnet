@@ -363,10 +363,6 @@ If you use SPOTnet, please cite:
 }
 ```
 
-## License
-
-Code is released under the [MIT License](LICENSE). Dataset and third-party assets retain their own licences.
-
 <p align="center">
   <strong>SPOTnet</strong><br />
   Detect the glare · Restore the field · Preserve the anatomy
