@@ -352,11 +352,14 @@ If you use SPOTnet, please cite:
 
 ```bibtex
 @article{alam2026spotnet,
-  title   = {SPOTnet: Weakly-Supervised Specular Reflection Detection and Removal for Minimal Access Surgery},
+  title   = {{SPOTnet}: weakly-supervised specular reflection detection and removal for minimally invasive surgery},
   author  = {Alam, Mahmood and Bilal, Muhammad and Khan, Ufaq and Cohen, Emil and Bapu, Deepa and Hajiyavand, Amir M. and Khan, Kifayat and Akanbi, Lukman and Ajayi, Anuoluwapo and Kumar, Vikas and Xie, Yutong and Ali, Muhammad A. and Beggs, Andrew D. and Khan, Muhammad Haris and Ashraf, Shazad Q.},
   journal = {npj Digital Surgery},
+  volume  = {1},
+  number  = {29},
   year    = {2026},
-  note    = {DOI to be added on publication}
+  doi     = {10.1038/s44484-026-00028-0},
+  url     = {https://doi.org/10.1038/s44484-026-00028-0}
 }
 ```
 
